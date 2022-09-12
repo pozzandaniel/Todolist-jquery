@@ -17,10 +17,13 @@ $(function() {
             let id = Date.now()
             $("ul").append("<li id="+ id +">"+ value +"</li>")
             $("#inputField").val("");
-            
-
+            $("li#"+ id +"").click(removeItem);
         }
     })
+
+    function removeItem() {
+        $(this).remove();
+    }
     
         
 
